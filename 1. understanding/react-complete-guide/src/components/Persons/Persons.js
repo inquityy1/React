@@ -3,17 +3,17 @@ import React, { Component } from "react";
 import Person from "./Person/Person";
 
 class Persons extends Component {
-  //   static getDerivedStateFromProps(props, state) {
-  //     console.log("[Perso.js] getDerivedStateFromProps");
-  //     return state;
-  //   }
+  // static getDerivedStateFromProps(props, state) {
+  //   console.log('[Persons.js] getDerivedStateFromProps');
+  //   return state;
+  // }
 
-  //   componentWillReceiveProps() {
-  //     console.log("sadsadsasda");
-  //   }
+  // componentWillReceiveProps(props) {
+  //   console.log('[Persons.js] componentWillReceiveProps', props);
+  // }
 
   shouldComponentUpdate(nextProps, nextState) {
-    console.log("[Persons.js] shoulComponentUpdate");
+    console.log("[Persons.js] shouldComponentUpdate");
     return true;
   }
 
@@ -22,9 +22,9 @@ class Persons extends Component {
     return { message: "Snapshot!" };
   }
 
-  //   componentWillUpdate() {
+  // componentWillUpdate() {
 
-  //   }
+  // }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
     console.log("[Persons.js] componentDidUpdate");
@@ -32,7 +32,7 @@ class Persons extends Component {
   }
 
   componentWillUnmount() {
-    console.log("[persons.js] componentWillUnmount");
+    console.log("[Persons.js] componentWillUnmount");
   }
 
   render() {
