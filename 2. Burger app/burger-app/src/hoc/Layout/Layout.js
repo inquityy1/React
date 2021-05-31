@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 
-import Auxiliary from "../Auxiliary/Auxiliary";
+import Aux from "../Auxiliary/Auxiliary";
 import classes from "./Layout.css";
 import Toolbar from "../../components/Navigation/Toolbar/Toolbar";
 import SideDrawer from "../../components/Navigation/SideDrawer/SideDrawer";
 
 class Layout extends Component {
   state = {
-    showsideDrawer: false,
+    showSideDrawer: false,
   };
 
   sideDrawerClosedHandler = () => {
@@ -22,14 +22,14 @@ class Layout extends Component {
 
   render() {
     return (
-      <Auxiliary>
+      <Aux>
         <Toolbar drawerToggleClicked={this.sideDrawerToggleHandler} />
         <SideDrawer
           open={this.state.showSideDrawer}
           closed={this.sideDrawerClosedHandler}
         />
         <main className={classes.Content}>{this.props.children}</main>
-      </Auxiliary>
+      </Aux>
     );
   }
 }
