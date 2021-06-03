@@ -11,7 +11,7 @@ const input = (props) => {
         <input
           className={classes.InputElement}
           {...props.elementConfig}
-          value={props}
+          value={props.value}
         />
       );
       break;
@@ -20,7 +20,7 @@ const input = (props) => {
         <textarea
           className={classes.InputElement}
           {...props.elementConfig}
-          value={props}
+          value={props.value}
         />
       );
       break;
@@ -29,7 +29,7 @@ const input = (props) => {
         <input
           className={classes.InputElement}
           {...props.elementConfig}
-          value={props}
+          value={props.value}
         />
       );
   }
