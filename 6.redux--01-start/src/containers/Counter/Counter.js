@@ -16,15 +16,12 @@ class Counter extends Component {
         />
         <CounterControl
           label="Decrement"
-          clicked={() => this.props.onDecrementCounter}
+          clicked={this.props.onDecrementCounter}
         />
-        <CounterControl
-          label="Add 10"
-          clicked={() => this.props.onAddCounter}
-        />
+        <CounterControl label="Add 10" clicked={this.props.onAddCounter} />
         <CounterControl
           label="Subtract 15"
-          clicked={() => this.props.onSubtractCounter}
+          clicked={this.props.onSubtractCounter}
         />
         <hr />
         <button onClick={() => this.props.onStoreResult(this.props.ctr)}>
