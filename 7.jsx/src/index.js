@@ -2,8 +2,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-// class App extends React.Component
-
 // Create a react component
 const App = () => {
   const buttonText = { text: "Click me" };
@@ -12,7 +10,9 @@ const App = () => {
 
   return (
     <div>
-      <label className="label">{labelText}</label>
+      <label className="label" htmlFor="name">
+        {labelText}
+      </label>
       <input id="name" type="text " />
       {/* <button style="background-color: blue; color: white;">Submit</button> */}
       <button style={style}>{buttonText.text}</button>
