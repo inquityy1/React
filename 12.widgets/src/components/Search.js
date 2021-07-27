@@ -3,9 +3,11 @@ import React, { useState, useEffect } from "react";
 const Search = () => {
   const [term, setTerm] = useState("");
 
+  console.log("i run with every render");
+
   useEffect(() => {
-    console.log("asdlfkj");
-  });
+    console.log("I ONLY RUN ONCE");
+  }, []);
 
   return (
     <div>
