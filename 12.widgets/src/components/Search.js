@@ -5,11 +5,9 @@ const Search = () => {
   const [term, setTerm] = useState("");
 
   useEffect(() => {
-    const search = async () => {
-      await axios.get("http://");
-    };
-
-    search();
+    (async () => {
+      await axios.get("http://...");
+    })();
   }, [term]);
 
   return (
