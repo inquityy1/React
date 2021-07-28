@@ -6,26 +6,34 @@ const Search = () => {
   const [results, setResults] = useState([]);
 
   useEffect(() => {
-    const search = async () => {
-      const { data } = await axios.get("http://en.wikipedia.org/w/api.php", {
-        params: {
-          action: "query",
-          list: "search",
-          origin: "*",
-          format: "json",
-          srsearch: term,
-        },
-      });
+    console.log("initial render");
 
-      setResults(data.query.search);
+    return () => {
+      console.log("CLEANUP");
     };
-
-    const timeoutId = setTimeout(() => {
-      if (term) {
-        search();
-      }
-    }, 500);
   }, [term]);
+
+  //   useEffect(() => {
+  //     const search = async () => {
+  //       const { data } = await axios.get("http://en.wikipedia.org/w/api.php", {
+  //         params: {
+  //           action: "query",
+  //           list: "search",
+  //           origin: "*",
+  //           format: "json",
+  //           srsearch: term,
+  //         },
+  //       });
+
+  //       setResults(data.query.search);
+  //     };
+
+  //     const timeoutId = setTimeout(() => {
+  //       if (term) {
+  //         search();
+  //       }
+  //     }, 500);
+  //   }, [term]);
 
   const renderedResults = results.map((result) => {
     return (
