@@ -5,8 +5,6 @@ const Search = () => {
   const [term, setTerm] = useState("programming");
   const [results, setResults] = useState([]);
 
-  console.log(results);
-
   useEffect(() => {
     const search = async () => {
       const { data } = await axios.get("http://en.wikipedia.org/w/api.php", {
@@ -25,6 +23,17 @@ const Search = () => {
     search();
   }, [term]);
 
+  const renderedResults = results.map((result) => {
+    return (
+      <div key={result.pageid} className="item">
+        <div className="content">
+          <div className="header">{result.title}</div>
+          {result.snippet}
+        </div>
+      </div>
+    );
+  });
+
   return (
     <div>
       <div className="ui form">
@@ -37,6 +46,7 @@ const Search = () => {
           />
         </div>
       </div>
+      <div className="ui celled list">{renderedResults}</div>
     </div>
   );
 };
