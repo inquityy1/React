@@ -1,11 +1,11 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { HashRouter, Route, Link } from "react-router-dom";
 
 const PageOne = () => {
   return (
     <div>
       PageOne BAD!!!
-      <a href="/pagetwo">Navigate to Page Two</a>
+      <Link to="/pagetwo">Navigate to Page Two</Link>
     </div>
   );
 };
@@ -16,7 +16,7 @@ const PageTwo = () => {
       PageTwo
       <button>Click Me!</button>
       BAD!!!
-      <a href="/">Navigate to Page One</a>
+      <Link to="/">Navigate to Page One</Link>
     </div>
   );
 };
@@ -24,12 +24,12 @@ const PageTwo = () => {
 const App = () => {
   return (
     <div>
-      <BrowserRouter>
+      <HashRouter>
         <div>
           <Route path="/" exact={true} component={PageOne} />
           <Route path="/pagetwo" component={PageTwo} />
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 };
