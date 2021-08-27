@@ -14,6 +14,24 @@
       "title": "dsa",
       "description": "dsa",
       "id": 3
+    },
+    {
+      "title": "I Created This Stream",
+      "description": "This was made by me!",
+      "userId": null,
+      "id": 4
+    },
+    {
+      "title": "I Created This Stream",
+      "description": "This was made by me!",
+      "userId": "102724768258929127901",
+      "id": 5
+    },
+    {
+      "title": "dsadsa",
+      "description": "dsadsa",
+      "userId": "102724768258929127901",
+      "id": 6
     }
   ]
 }
