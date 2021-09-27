@@ -1,0 +1,63 @@
+Zadatak - Dashboard with crud and roles
+
+1. Na Login strani(dizajn fajl: "login.png") imas formu koja prima dva input-a - username i password
+   * Napravi "Lazni bekend" koji ce imati dva korisnika koji mogu da se uloguju(dobices json sa dva korisnika)
+   * Oba polja moraju da se popune da bi se ulogovao - implementiraj validaciju sa porukama
+   * Kad se korisnik uspesno uloguje ici ce ili na admin dashboard, ili na user stranicu
+   * Ono sto odredjuje gde ide je polje "role"(role moze da bude ili "admin" ili "user") koje ces imati kad se loguju
+   * Role === admin ide na admin dashboard stranicu, Role === user ide na user stranicu
+
+2. Na Admin Dashboard strani(dizajn fajl: "admin.png") imas tabelu i Add new button
+   * U tabeli renderujes podatke(dobices objekat primer) po dizajnu, kod svakog item-a imaces dva action button-a Update i Delete
+   * Kad se klikne na Add new item ide se na add new item stranicu sa formom, na uspesno sejvovanje admin se vraca na dashboard sa osvezenom tabelom
+   * Kad se klikne na Update dugme, user ide na update stranicu gde ima popunjenu formu koju moze da izmeni i sejvuje
+   * Kad se klinke na Delete, pojavljuje se modal koji pita admin-a da li je siguran za brisanje, ako je yes, brise se podatak iz tabele(no ili x je otkazivanje operacije)
+
+3. Na Add strani(dizajn fajl: "add.png") imas form-u i ispod forme dva button-a(zaboravio da dodam na dizajn "Submit" i "Cancel")
+   * U formi imas osim unosa za "name", "location" "price" i opciju da upload-ujes i sliku
+   * Sva polja su obavezna osim lokacije
+   * Polje name i location su text input-i, naravno price je number input
+   * Izbaci crvenu poruku ispod input-a koji je fejlovao na Submit(na primer sve se unese osim name - ispod name input-a ce se pojaviti crvena poruka, "This field is required")
+   * Za upload se snadji, na click ces birati fajl sa svog kompa, samo slike dolaze u obzir
+   * Na Submit(uspesni) ili Cancel admin se vraca na dashboard stranicu
+
+3. Na Update strani(dizajn fajl: "add.png") imas form-u i ispod forme dva button-a(zaboravio da dodam na dizajn "Update" i "Cancel")
+   * Primetices da je isti dizajn fajl, mrzelo me da crtam, sve je isto osim sto nema opcija da se dira slika(prikazi kao disabled)
+   * Sva polja su koja postoje su popunjena podacima(update logicno menja postojece podatke), i ti mozes da ih menjas
+   * Na uspesno menjanje, admin se vraca na dashboard i vidi promenu
+   * Izbaci crvenu poruku ispod input-a koji je fejlovao na Update(na primer sve se unese osim name - ispod name input-a ce se pojaviti crvena poruka, "This field is required")
+   * Na Update(uspesni) ili Cancel admin se vraca na dashboard stranicu
+
+4. Na User strani(dizajn fajl: "user.png") je card list sa podacima(koje admin vidi u tabeli)
+   * Svaki ui card mora da ima podatke kao na dizajnu i sliku koja je vezana za podatke
+   * Ukoliko trenutno ne postoje podaci, user vidi samo poruku umesto card-ova "No items available..."
+   * User moze samo da gleda, ne postoje nikakve crud operacije za njega, moze naravno i da se odloguje
+
+5. Primetices na svim dizajnima header logiku, koja ima logout(i inicijalno login text)
+   * Sa klikom na logout user ili admin se odloguje i vrati na login stranicu(ocisti i local storage)
+   * Header bi trebalo da bude jedna komponenta koja se reuse-uje i reaguje na to koja je stranica
+   * Kad je admin/user na login stranici, logicno da Logout button ne sme da se renderuje, samo kad je logovan uspesno
+   * Isprati dizajn header-a za login stranicu
+
+--->IMAS I RESURSI.RAR GDE IMAS LAZNU DATABAZU SA DVA KORISNIKA I IMAS USER.MODEL.JS FILE GDE VIDIS PRIMER ITEM OBJEKTA
+
+GLAVNI KRITERIJUMI I PRAVILA ZADATKA:
+
+1. Moras da imas zastitu ruta, kad se loguje user, on moze da ide samo na user stranicu
+   * Zadatak je neuspesan ako kao user nekako odem na admin dashboard ili add/update stranice(cak i ako budem kucao u url, ne smem da odem na te stranice)
+   * Admin ima pravo kad se loguje da ide gde hoce, i user stranu moze da ode
+   * Zadatak je neuspesan ako se ne koristi React
+   * Zadatak je neuspesan ako aplikacija nije single page
+   * Zadatak je neuspesan ako se header ne implentira kao reuse komponenta(nema duplikata, dinamicko ponasanje)
+   * Zadatak je neuspesan ako se probije rok(8 radnih dana)
+   * Zadatak kad se najavi, tece vreme od tog momemnta, nema ni vikend pauza niti bilo kakvih, 8 dana zaredom
+
+2. *****************BONUSI*************************
+   * Zavrsetak pre vremena/roka
+   * Koricenje redux-a
+   * Dobar UX
+   * Kod koji moze da se reuse-uje
+   * Optimizovan UX za sve ekrane
+
+Sve ove operacije i zadatke si prolazio dok si radio tutorijale i lako se gugla. Mozda sam da i previse vremena
+   
