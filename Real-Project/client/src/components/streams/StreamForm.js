@@ -2,6 +2,10 @@ import React from "react";
 import { Field, reduxForm } from "redux-form";
 
 class StreamForm extends React.Component {
+  state = {
+    selectedFile: null,
+  };
+
   renderError({ error, touched }) {
     if (touched && error) {
       return (
@@ -28,18 +32,47 @@ class StreamForm extends React.Component {
     this.props.onSubmit(formValues);
   };
 
+  fileSelectedHandler = (event) => {
+    this.setState({
+      selectedFile: event.target.files[0],
+    });
+  };
+
   render() {
     return (
       <form
         onSubmit={this.props.handleSubmit(this.onSubmit)}
         className="ui form error"
       >
-        <Field name="title" component={this.renderInput} label="Enter Title" />
+        <Field name="title" component={this.renderInput} label="Item name" />
         <Field
           name="description"
           component={this.renderInput}
-          label="Enter Description"
+          label="Item location"
         />
+        <Field name="price" component={this.renderInput} label="item price" />
+        <div>
+          <input
+            style={{ display: "none" }}
+            type="file"
+            accept="image/*"
+            onChange={this.fileSelectedHandler}
+            ref={(fileInput) => (this.fileInput = fileInput)}
+          />
+          <button
+            style={{
+              backgroundColor: "green",
+              color: "white",
+              marginBottom: "20px",
+              height: "3vh",
+              borderRadius: "12px",
+            }}
+            name="image"
+            onClick={() => this.fileInput.click()}
+          >
+            Select Image
+          </button>
+        </div>
         <button className="ui button primary">Submit</button>
       </form>
     );
@@ -50,11 +83,19 @@ const validate = (formValues) => {
   const errors = {};
 
   if (!formValues.title) {
-    errors.title = "You must enter a title";
+    errors.title = "You must enter a name";
   }
 
   if (!formValues.description) {
-    errors.description = "You must enter a description";
+    errors.description = "You must enter a location";
+  }
+
+  if (!formValues.price) {
+    errors.price = "You must enter a price";
+  }
+
+  if (!formValues.image) {
+    errors.image = "You must sellect a image";
   }
 
   return errors;

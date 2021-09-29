@@ -38,9 +38,6 @@ class StreamDelete extends React.Component {
   }
 
   iks() {
-    const { id } = this.props.match.params;
-    // const id = this.props.match.params.id;
-
     return (
       <React.Fragment>
         <Link to="/" className="ui button negative">
