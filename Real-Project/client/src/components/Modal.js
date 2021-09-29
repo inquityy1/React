@@ -8,8 +8,24 @@ const Modal = (props) => {
         onClick={(e) => e.stopPropagation()}
         className="ui standard modal visible active"
       >
-        <div className="header">{props.title}</div>
-        <div className="content">{props.content}</div>
+        <div
+          style={{ display: "flex", justifyContent: "space-between" }}
+          className="header"
+        >
+          <div>{props.title}</div>
+          <div>{props.iks}</div>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            fontSize: "30px",
+            height: "15vh",
+          }}
+        >
+          {props.content}
+        </div>
         <div className="actions">{props.actions}</div>
       </div>
     </div>,

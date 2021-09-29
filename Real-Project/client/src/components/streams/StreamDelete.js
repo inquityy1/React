@@ -20,10 +20,10 @@ class StreamDelete extends React.Component {
           onClick={() => this.props.deleteStream(id)}
           className="ui button negative"
         >
-          Delete
+          Yes
         </button>
         <Link to="/" className="ui button">
-          Cancel
+          No
         </Link>
       </React.Fragment>
     );
@@ -34,7 +34,20 @@ class StreamDelete extends React.Component {
       return "Are you sure you want to delete this stream?";
     }
 
-    return `Are you sure you want to delete the steam with title: ${this.props.stream.title}`;
+    return `Are you sure?`;
+  }
+
+  iks() {
+    const { id } = this.props.match.params;
+    // const id = this.props.match.params.id;
+
+    return (
+      <React.Fragment>
+        <Link to="/" className="ui button negative">
+          X
+        </Link>
+      </React.Fragment>
+    );
   }
 
   render() {
@@ -43,6 +56,7 @@ class StreamDelete extends React.Component {
         title="Delete Stream"
         content={this.renderContent()}
         actions={this.renderActions()}
+        iks={this.iks()}
         onDismiss={() => history.push("/")}
       />
     );
