@@ -18,11 +18,27 @@ class StreamDelete extends React.Component {
       <React.Fragment>
         <button
           onClick={() => this.props.deleteStream(id)}
-          className="ui button negative"
+          className="ui button"
+          style={{
+            border: "none",
+            backgroundColor: "red",
+            borderRadius: "5px",
+            width: "150px",
+            marginRight: "20px",
+          }}
         >
           Yes
         </button>
-        <Link to="/" className="ui button">
+        <Link
+          to="/"
+          className="ui button"
+          style={{
+            backgroundColor: "gray",
+            borderRadius: "5px",
+            width: "150px",
+            marginRight: "20px",
+          }}
+        >
           No
         </Link>
       </React.Fragment>
@@ -37,12 +53,10 @@ class StreamDelete extends React.Component {
     return `Are you sure?`;
   }
 
-  iks() {
+  x() {
     return (
       <React.Fragment>
-        <Link to="/" className="ui button negative">
-          X
-        </Link>
+        <Link to="/">X</Link>
       </React.Fragment>
     );
   }
@@ -53,7 +67,7 @@ class StreamDelete extends React.Component {
         title="Delete Stream"
         content={this.renderContent()}
         actions={this.renderActions()}
-        iks={this.iks()}
+        x={this.x()}
         onDismiss={() => history.push("/")}
       />
     );

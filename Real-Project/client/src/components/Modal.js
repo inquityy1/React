@@ -9,11 +9,10 @@ const Modal = (props) => {
         className="ui standard modal visible active"
       >
         <div
-          style={{ display: "flex", justifyContent: "space-between" }}
+          style={{ display: "flex", justifyContent: "flex-end" }}
           className="header"
         >
-          <div>{props.title}</div>
-          <div>{props.iks}</div>
+          {props.x}
         </div>
         <div
           style={{
@@ -26,7 +25,15 @@ const Modal = (props) => {
         >
           {props.content}
         </div>
-        <div className="actions">{props.actions}</div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginBottom: "3px",
+          }}
+        >
+          {props.actions}
+        </div>
       </div>
     </div>,
     document.querySelector("#modal")
