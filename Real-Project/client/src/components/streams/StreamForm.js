@@ -51,26 +51,28 @@ class StreamForm extends React.Component {
           label="Item location"
         />
         <Field name="price" component={this.renderInput} label="item price" />
-        <input
-          style={{ display: "none" }}
-          type="file"
-          accept="image/*"
-          onChange={this.fileSelectedHandler}
-          ref={(fileInput) => (this.fileInput = fileInput)}
-        />
-        <button
-          style={{
-            backgroundColor: "green",
-            color: "white",
-            marginBottom: "20px",
-            height: "3vh",
-            borderRadius: "12px",
-          }}
-          name="image"
-          onClick={() => this.fileInput.click()}
-        >
-          Select Image
-        </button>
+        <div>
+          <input
+            style={{ display: "none" }}
+            type="file"
+            accept="image/*"
+            onChange={this.fileSelectedHandler}
+            ref={(fileInput) => (this.fileInput = fileInput)}
+          />
+          <button
+            style={{
+              backgroundColor: "green",
+              color: "white",
+              marginBottom: "20px",
+              height: "3vh",
+              borderRadius: "12px",
+            }}
+            name="image"
+            onClick={() => this.fileInput.click()}
+          >
+            Select Image
+          </button>
+        </div>
         <button className="ui button primary">Submit</button>
       </form>
     );
