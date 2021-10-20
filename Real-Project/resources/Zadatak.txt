@@ -60,3 +60,4 @@ GLAVNI KRITERIJUMI I PRAVILA ZADATKA:
    * Optimizovan UX za sve ekrane
 
 Sve ove operacije i zadatke si prolazio dok si radio tutorijale i lako se gugla. Mozda sam da i previse vremena
+mock = lazni u programiranju
