@@ -1,10 +1,15 @@
 class Hello extends React.Component {
   render() {
+    let bangs = "!".repeat(this.props.bangs);
     const props = this.props;
     return (
-      <h1>
-        Hi {props.to} from {props.from}
-      </h1>
+      <div>
+        <p>
+          Hi {props.to} from {props.from}
+          {bangs}
+        </p>
+        <img src={this.props.img} />
+      </div>
     );
   }
 }
