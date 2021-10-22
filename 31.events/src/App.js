@@ -3,6 +3,7 @@ import WiseSquare from "./WiseSquare";
 import AnnoyingForm from "./AnnoyingForm";
 import CopyDemo from "./CopyDemo";
 import WiseSquareWithProps from "./WiseSquareWithProps";
+import ExperimentalSquare from "./ExperimentalSquare";
 
 import "./App.css";
 
@@ -14,6 +15,7 @@ function App() {
       <AnnoyingForm />
       <CopyDemo />
       <WiseSquareWithProps />
+      <ExperimentalSquare />
     </div>
   );
 }
