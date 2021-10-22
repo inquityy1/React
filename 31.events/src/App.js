@@ -1,13 +1,14 @@
 import React from "react";
-import ButtonList from "./ButtonList";
+import NumberList from "./NumberList";
+import BetterNumberList from "./BetterNumberList";
 
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>React Events!!</h1>
-      <ButtonList />
+      <NumberList />
+      <BetterNumberList />
     </div>
   );
 }
