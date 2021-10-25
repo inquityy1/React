@@ -1,13 +1,12 @@
 import MultipleForm from "./MultipleForm";
-import Form from "./Form";
+import ShoppingList from "./ShoppingList";
 
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Form />
-      <MultipleForm />
+      <ShoppingList />
     </div>
   );
 }
