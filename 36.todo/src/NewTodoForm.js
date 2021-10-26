@@ -28,7 +28,7 @@ class NewTodoForm extends Component {
         <input
           type="text"
           placeholder="New Todo"
-          id="uuidv4"
+          id="task"
           name="task"
           value={this.state.task}
           onChange={this.handleChange}
