@@ -15,6 +15,12 @@ class Todo extends Component {
     this.handleToggle = this.handleToggle.bind(this);
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    console.log("TODO COMPONENT DID UPDATE");
+    console.log(prevProps.task);
+    console.log(this.props.task);
+  }
+
   handleRemove() {
     this.props.removeTodo(this.props.id);
   }
