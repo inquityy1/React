@@ -1,14 +1,17 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Message from "./Message";
 
 export default class Sardines extends Component {
   render() {
     return (
       <div>
-        <h1>Sardines</h1>
-        <Link exact to="/">
-          BACK
-        </Link>
+        <Message>
+          <h1>Sardines</h1>
+          <Link exact to="/">
+            BACK
+          </Link>
+        </Message>
       </div>
     );
   }
