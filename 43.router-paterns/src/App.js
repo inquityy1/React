@@ -1,6 +1,7 @@
 import Food from "./Food";
 import Meal from "./Meal";
 import FoodSearch from "./FoodSearch";
+import Navbar from "./Navbar";
 import { Route, Switch } from "react-router-dom";
 
 import "./App.css";
@@ -8,6 +9,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
+      <Navbar />
       <Switch>
         <Route
           exact
