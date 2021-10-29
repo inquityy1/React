@@ -16,6 +16,7 @@ class Navbar extends Component {
     return (
       <div>
         <button onClick={this.handleLogin}>Log In</button>
+        <button onClick={this.props.history.goBack}>Go back</button>
       </div>
     );
   }
