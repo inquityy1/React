@@ -19,7 +19,8 @@ function App() {
         {/* <Route exact path="/food/:name" component={Food} /> - if u dont share props */}
 
         <Route exact path="/food/:foodName/drink/:drinkName" component={Meal} />
-        <Route exact path="/" render={() => <FoodSearch />} />
+        {/* <Route exact path="/" render={(routeParams) => <FoodSearch {...routeParams} />} /> */}
+        <Route exact path="/" component={FoodSearch} />
         <Route render={() => <h1>ERROR NOT FOUND!!!</h1>} />
       </Switch>
     </div>
