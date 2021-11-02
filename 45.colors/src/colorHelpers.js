@@ -21,8 +21,8 @@ function generatePalette(starterPalette) {
         rgb: chroma(scale[i]).css(),
         rgba: chroma(scale[i])
           .css()
-          .replace("rgba", "rgba")
-          .replace(")", ",1.0"),
+          .replace("rgb", "rgba")
+          .replace(")", ",1.0)"),
       });
     }
   }
