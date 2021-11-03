@@ -7,7 +7,6 @@ import seedColors from "./seedColors";
 import { generatePalette } from "./colorHelpers";
 
 import "./App.css";
-import Pallete from "./Palette";
 
 class App extends Component {
   findPalette(id) {
