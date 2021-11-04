@@ -5,20 +5,15 @@ import Drawer from "@mui/material/Drawer";
 import CssBaseline from "@mui/material/CssBaseline";
 import MuiAppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import List from "@mui/material/List";
 import Typography from "@mui/material/Typography";
 import { Divider } from "@material-ui/core";
 import IconButton from "@material-ui/core/IconButton";
 import { MenuItem } from "@material-ui/core";
 import { ChevronLeft } from "@material-ui/icons";
-import { ChevronRight } from "@material-ui/icons";
-import ListItem from "@mui/material/ListItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import { Inbox } from "@material-ui/icons";
-import { Mail } from "@material-ui/icons";
+import Button from "@material-ui/core/Button";
+import { SketchPicker } from "react-color";
 
-const drawerWidth = 240;
+const drawerWidth = 325;
 
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
   ({ theme, open }) => ({
@@ -113,10 +108,25 @@ export default function PersistentDrawerLeft() {
           <IconButton onClick={handleDrawerClose}>{<ChevronLeft />}</IconButton>
         </DrawerHeader>
         <Divider />
+        <Typography variant="h4">Design Your Palette</Typography>
+        <div>
+          <Button variant="contained" color="secondary">
+            Clear Palette
+          </Button>
+          <Button variant="contained" color="primary">
+            Random Color
+          </Button>
+        </div>
+        <SketchPicker
+          color="purple"
+          onChangeComplete={(newColor) => console.log(newColor)}
+        />
+        <Button variant="contained" color="primary">
+          ADD COLOR
+        </Button>
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
-        <p>hjkfdgjkfdgajkiagknanwsfewdsnfeawsdefwsaik</p>
       </Main>
     </Box>
   );
