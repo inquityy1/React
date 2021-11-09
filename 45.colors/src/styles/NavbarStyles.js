@@ -43,7 +43,7 @@ export default {
         width: "13px",
         height: "13px",
       },
-    [sizes.down("md")]: {
+    [sizes.down("sm")]: {
       width: "150px",
     },
   },
