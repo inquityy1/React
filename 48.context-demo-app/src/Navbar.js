@@ -14,12 +14,12 @@ class Navbar extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <AppBar position='static' color='primary'>
+        <AppBar position="static" color="primary">
           <Toolbar>
-            <IconButton className={classes.menuButton} color='inherit'>
+            <IconButton className={classes.menuButton} color="inherit">
               <span>🇫🇷</span>
             </IconButton>
-            <Typography className={classes.title} variant='h6' color='inherit'>
+            <Typography className={classes.title} variant="h6" color="inherit">
               App Title
             </Typography>
             <Switch />
@@ -29,10 +29,10 @@ class Navbar extends Component {
                 <SearchIcon />
               </div>
               <InputBase
-                placeholder='Search...'
+                placeholder="Search..."
                 classes={{
                   root: classes.inputRoot,
-                  input: classes.inputInput
+                  input: classes.inputInput,
                 }}
               />
             </div>

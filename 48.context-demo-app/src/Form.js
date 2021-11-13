@@ -24,30 +24,30 @@ class Form extends Component {
           <Avatar className={classes.avatar}>
             <LockOutlinedIcon />
           </Avatar>
-          <Typography variant='h5'>Sign In</Typography>
-          <Select value='english'>
-            <MenuItem value='english'>English</MenuItem>
-            <MenuItem value='french'>French</MenuItem>
-            <MenuItem value='spanish'>Spanish</MenuItem>
+          <Typography variant="h5">Sign In</Typography>
+          <Select value="english">
+            <MenuItem value="english">English</MenuItem>
+            <MenuItem value="french">French</MenuItem>
+            <MenuItem value="spanish">Spanish</MenuItem>
           </Select>
           <form className={classes.form}>
-            <FormControl margin='normal' required fullWidth>
-              <InputLabel htmlFor='email'>Email</InputLabel>
-              <Input id='email' name='email' autoFocus />
+            <FormControl margin="normal" required fullWidth>
+              <InputLabel htmlFor="email">Email</InputLabel>
+              <Input id="email" name="email" autoFocus />
             </FormControl>
-            <FormControl margin='normal' required fullWidth>
-              <InputLabel htmlFor='password'>Password</InputLabel>
-              <Input id='password' name='password' autoFocus />
+            <FormControl margin="normal" required fullWidth>
+              <InputLabel htmlFor="password">Password</InputLabel>
+              <Input id="password" name="password" autoFocus />
             </FormControl>
             <FormControlLabel
-              control={<Checkbox color='primary' />}
-              label='Remember Me'
+              control={<Checkbox color="primary" />}
+              label="Remember Me"
             />
             <Button
-              variant='contained'
-              type='submit'
+              variant="contained"
+              type="submit"
               fullWidth
-              color='primary'
+              color="primary"
               className={classes.submit}
             >
               Sign In
