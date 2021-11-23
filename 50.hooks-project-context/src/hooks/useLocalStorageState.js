@@ -13,7 +13,7 @@ function useLocalStorageState(key, defaultVal) {
     return value;
   });
   useEffect(() => {
-    window.localStorage.setItem(key.JSON.stringify(state));
+    window.localStorage.setItem(key, JSON.stringify(state));
   }, [state]);
   return [state, setState];
 }
