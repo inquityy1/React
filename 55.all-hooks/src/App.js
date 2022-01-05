@@ -1,10 +1,10 @@
-import UseEffect from "./UseEffect";
+import UseRef from "./UseRef";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <UseEffect />
+      <UseRef />
     </div>
   );
 }
