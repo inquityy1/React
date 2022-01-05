@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "username": "Neca",
+      "password": "neca123",
+      "role": "admin"
+    },
+    {
+      "username": "Nemanja",
+      "password": "bucko123",
+      "role": "user"
+    }
+  ],
+  "items": [
+    {
+      "id": 98,
+      "name": "Crown",
+      "address": "USA",
+      "price": 2000
+    },
+    {
+      "id": 34,
+      "name": "Debeli",
+      "address": "Butchery",
+      "price": 13
+    },
+    {
+      "id": 71,
+      "name": "123",
+      "address": "23",
+      "price": 1234
+    }
+  ]
+}
