@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 
 function UseState() {
+  const [counter, setCounter] = useState(0);
+
+  const increment = () => {
+    setCounter(counter + 1);
+  };
+
   return (
     <div>
-      <h1>dsa</h1>
+      <button onClick={increment}>click me</button>
+      <h1>{counter}</h1>
     </div>
   );
 }
