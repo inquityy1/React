@@ -1,9 +1,11 @@
 import React from "react";
+import Button from "./Button";
 
 function UseImperativeHandle() {
   return (
     <div>
-      <h1>dsadsa</h1>
+      <button>Button From Parent</button>
+      <Button />
     </div>
   );
 }
