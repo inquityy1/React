@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import axios from "axios";
 
 function UseMemo() {
@@ -29,9 +29,11 @@ function UseMemo() {
     return longestName;
   };
 
+  const getLongestName = useMemo(() => findLongestName(data), [data]);
+
   return (
     <div>
-      <div>{findLongestName(data)}</div>
+      <div>{getLongestName}</div>
 
       <button
         onClick={() => {
