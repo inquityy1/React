@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { AppContext } from "./UseContext";
 
-export default function User() {
+function User() {
   const { username } = useContext(AppContext);
 
   return (
@@ -10,3 +10,5 @@ export default function User() {
     </div>
   );
 }
+
+export default User;
