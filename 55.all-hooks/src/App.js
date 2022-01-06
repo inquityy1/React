@@ -1,10 +1,10 @@
-import UseImperativeHandle from "./UseImperativeHandle";
+import UseContext from "./UseContext";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <UseImperativeHandle />
+      <UseContext />
     </div>
   );
 }
