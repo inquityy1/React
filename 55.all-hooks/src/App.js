@@ -1,10 +1,10 @@
-import UseMemo from "./UseMemo";
+import UseCallback from "./UseCallback";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <UseMemo />
+      <UseCallback />
     </div>
   );
 }
