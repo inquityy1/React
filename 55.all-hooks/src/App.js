@@ -1,10 +1,10 @@
-import UseRef from "./UseRef";
+import UseImperativeHandle from "./UseImperativeHandle";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <UseRef />
+      <UseImperativeHandle />
     </div>
   );
 }
