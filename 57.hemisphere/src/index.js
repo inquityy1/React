@@ -20,6 +20,14 @@ class App extends React.Component {
     );
   }
 
+  componentDidMount() {
+    console.log("componentDidMount");
+  }
+
+  componentDidUpdate() {
+    console.log("componentDidUpdate");
+  }
+
   render() {
     if (this.state.errorMessage && !this.state.latitude) {
       return <div>{this.state.errorMessage}</div>;
