@@ -20,15 +20,18 @@ const HemisphereDisplay = ({ latitude }) => {
   const { text, picture } = hemisphereConfig[hemisphere];
 
   return (
-    <div className={hemisphere}>
-      <div className="ui raised text container segment">
-        <div className="image">
-          <img src={picture} alt="hemisphere picture" />
-        </div>
-        <div className="ui teal bottom attached label">
-          <h1>{text}</h1>
+    <div>
+      <div className={hemisphere}>
+        <div className="ui raised text container segment">
+          <div className="image">
+            <img src={picture} alt="hemisphere picture" />
+          </div>
+          <div className="ui teal bottom attached label">
+            <h1>{text}</h1>
+          </div>
         </div>
       </div>
+      <h1>Hello</h1>
     </div>
   );
 };
