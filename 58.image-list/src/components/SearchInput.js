@@ -1,10 +1,14 @@
 import React from "react";
 
 class SearchInput extends React.Component {
-  onInputChange(e) {
-    e.preventDefault();
-    console.log(e.target.value);
-  }
+  state = {
+    entry: "",
+  };
+
+  //   onInputChange(e) {
+  //     e.preventDefault();
+  //     console.log(e.target.value);
+  //   }
 
   render() {
     return (
@@ -15,7 +19,8 @@ class SearchInput extends React.Component {
               <input
                 type="text"
                 placeholder="search..."
-                onChange={this.onInputChange}
+                onChange={(e) => this.setState({ entry: e.target.value })}
+                value={this.state.entry}
               />
               <i className="search icon"></i>
             </div>
