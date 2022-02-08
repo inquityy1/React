@@ -1,0 +1,20 @@
+.Northern {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ee82ee;
+}
+
+img {
+  max-height: 40vh;
+  max-width: 40vh;
+}
+
+.Southern {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #7fffd4;
+}
