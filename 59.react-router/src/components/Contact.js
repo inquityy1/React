@@ -8,7 +8,7 @@ const Contact = (props) => {
         style={{ marginTop: "80px" }}
         className="ui raised very padded text container segment"
       >
-        <Link to="/card/alex" className="ui header">
+        <Link to="/alex" className="ui header">
           alex
         </Link>
         <p>
@@ -21,7 +21,7 @@ const Contact = (props) => {
         style={{ marginTop: "80px" }}
         className="ui raised very padded text container segment"
       >
-        <Link to="/card/willma" className="ui header">
+        <Link to="/willma" className="ui header">
           willma
         </Link>
         <p>
