@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Modal from "./Modal";
 
 const Contact = (props) => {
   return (
     <div>
+      <Modal />
       <div
         style={{ marginTop: "80px" }}
         className="ui raised very padded text container segment"
