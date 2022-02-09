@@ -3,9 +3,12 @@ import axios from "axios";
 import SearchInput from "./SearchInput";
 
 class App extends React.Component {
-  onSearchSubmit = (entry) => {
-    console.log(entry);
-  };
+  async onSearchSubmit(entry) {
+    const response = await axios.get(
+      `https://pixabay.com/api/?key=25625049-f30c5e7c55321c2ac75879595&q=${entry}&image_type=photo`
+    );
+    console.log(response.data.hits);
+  }
 
   render() {
     return (
