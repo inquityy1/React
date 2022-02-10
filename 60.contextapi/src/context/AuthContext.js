@@ -4,11 +4,12 @@ export const AuthContext = createContext();
 
 class AuthContextProvider extends React.Component {
   state = {
-    isLogedIn: false,
+    isLoggedIn: true,
   };
 
   changeAuthStatus = () => {
-    this.setState({ isLogedIn: !this.isLogedIn });
+    const { isLoggedIn } = this.state;
+    this.setState({ isLoggedIn: !isLoggedIn });
   };
 
   render() {
