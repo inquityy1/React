@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 
 class Card extends Component {
   //   state = { user: "" };
-
   //   componentDidMount() {
   //     let user = this.props.match.params.user;
   //     this.setState({ user });
