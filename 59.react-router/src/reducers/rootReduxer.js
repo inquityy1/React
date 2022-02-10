@@ -16,6 +16,7 @@ const initialState = {
       body: "Lorem Ipsum is simply dummy text of the printing and typesetting",
     },
   ],
+  users: [],
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -28,7 +29,11 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         cards: newCard,
       };
-
+    case "FETCH_USERS":
+      return {
+        ...state,
+        users: action.payload,
+      };
     default:
       return state;
   }
