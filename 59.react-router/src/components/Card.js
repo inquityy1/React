@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { deleteCard } from "../actions/cardActions";
 
 class Card extends Component {
   //   state = { user: "" };
@@ -46,7 +47,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     deleteCard: (id) => {
-      dispatch({ type: "DELETE_CARD", id });
+      dispatch(deleteCard(id));
     },
   };
 };
