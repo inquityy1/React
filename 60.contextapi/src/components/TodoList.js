@@ -5,7 +5,7 @@ class TodoList extends Component {
   static contextType = ThemeContext;
 
   render() {
-    const { isDarkTheme, lightTheme, darkTheme } = this.context;
+    const { isDarkTheme, lightTheme, darkTheme, changeTheme } = this.context;
     const theme = isDarkTheme ? darkTheme : lightTheme;
     return (
       <div
@@ -19,6 +19,9 @@ class TodoList extends Component {
         <p className="item">Plan the family trip</p>
         <p className="item">Go for shopping for dinner</p>
         <p className="item">Go for a walk</p>
+        <button className="ui button primary" onClick={changeTheme}>
+          Change theme!
+        </button>
       </div>
     );
   }
