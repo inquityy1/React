@@ -15,7 +15,6 @@ class TodoList extends Component {
           height: "140px",
           textAlign: "center",
         }}
-        className="ui list"
       >
         <p className="item">Plan the family trip</p>
         <p className="item">Go for shopping for dinner</p>
