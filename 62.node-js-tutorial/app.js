@@ -1,3 +1,5 @@
+///////////////////// basic nodejs code
+
 // console.log("hello world");
 
 // let count = 0;
@@ -13,18 +15,26 @@
 // console.log(__dirname);
 // console.log(__filename);
 
+///////////////////////// function
+
 // function orange() {
 //   console.log("hello world");
 // }
 
 // orange();
 
-function callbackFunc(func) {
-  func();
-}
+//////////////////// passing the function through another one
 
-let red = function () {
-  console.log("hi there");
-};
+// function callbackFunc(func) {
+//   func();
+// }
 
-callbackFunc(red);
+// let red = function () {
+//   console.log("hi there");
+// };
+
+// callbackFunc(red);
+
+const helper = require("./helper");
+
+console.log(helper("Alex"));
