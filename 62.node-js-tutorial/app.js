@@ -35,8 +35,12 @@
 
 // callbackFunc(red);
 
-const helper = require("./helper");
+const events = require("events");
 
-console.log(helper.user("Alex"));
-console.log(helper.id("123"));
-console.log(helper.email("alex@mail.com"));
+const myEmitter = new events.EventEmitter();
+
+myEmitter.on("test", function (arg) {
+  console.log(arg);
+});
+
+myEmitter.emit("test", "hello world");
