@@ -35,27 +35,39 @@
 
 // callbackFunc(red);
 
-const events = require("events");
-const util = require("util");
+// const events = require("events");
+// const util = require("util");
 
-const teams = function (name) {
-  this.name = name;
-};
+// const teams = function (name) {
+//   this.name = name;
+// };
 
-util.inherits(teams, events.EventEmitter);
+// util.inherits(teams, events.EventEmitter);
 
-const Arsenal = new teams("Arsenal");
-const Juventus = new teams("Juventus");
-const Galatasaray = new teams("Galatasaray");
+// const Arsenal = new teams("Arsenal");
+// const Juventus = new teams("Juventus");
+// const Galatasaray = new teams("Galatasaray");
 
-const teamArray = [Arsenal, Juventus, Galatasaray];
+// const teamArray = [Arsenal, Juventus, Galatasaray];
 
-teamArray.forEach((team) => {
-  team.on("nation", function (nation) {
-    console.log(team.name + " is " + nation + " football club");
+// teamArray.forEach((team) => {
+//   team.on("nation", function (nation) {
+//     console.log(team.name + " is " + nation + " football club");
+//   });
+// });
+
+// Arsenal.emit("nation", "English");
+// Juventus.emit("nation", "Italian");
+// Galatasaray.emit("nation", "Turkish");
+
+const fs = require("fs");
+
+fs.readFile("read-me.txt", "utf-8", function (error, data) {
+  fs.writeFile("write.txt", data, function (error) {
+    if (error) {
+      console.log(error);
+    }
   });
 });
 
-Arsenal.emit("nation", "English");
-Juventus.emit("nation", "Italian");
-Galatasaray.emit("nation", "Turkish");
+// fs.writeFileSync("write.txt", text);
