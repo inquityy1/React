@@ -60,14 +60,36 @@
 // Juventus.emit("nation", "Italian");
 // Galatasaray.emit("nation", "Turkish");
 
-const fs = require("fs");
+// const fs = require("fs");
 
-fs.readFile("read-me.txt", "utf-8", function (error, data) {
-  fs.writeFile("write.txt", data, function (error) {
-    if (error) {
-      console.log(error);
-    }
-  });
-});
+// fs.readFile("read-me.txt", "utf-8", function (error, data) {
+//   fs.writeFile("write.txt", data, function (error) {
+//     if (error) {
+//       console.log(error);
+//     }
+//   });
+// });
 
 // fs.writeFileSync("write.txt", text);
+
+// const fs = require("fs");
+
+// fs.unlink("write.txt", (error) => {
+//   console.log(error);
+// });
+
+// const fs = require("fs");
+
+// fs.mkdir("my-folder", () => {
+//   fs.readFile("read-me.txt", "utf-8", (error, data) => {
+//     fs.writeFile("./my-folder/write-me.txt", data, () => {});
+//   });
+// });
+
+const fs = require("fs");
+
+fs.unlink("./my-folder/write-me.txt", () => {
+  fs.rmdir("my-folder", (error) => {
+    console.log(error);
+  });
+});
