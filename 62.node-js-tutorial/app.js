@@ -12,3 +12,19 @@
 
 // console.log(__dirname);
 // console.log(__filename);
+
+// function orange() {
+//   console.log("hello world");
+// }
+
+// orange();
+
+function callbackFunc(func) {
+  func();
+}
+
+let red = function () {
+  console.log("hi there");
+};
+
+callbackFunc(red);
