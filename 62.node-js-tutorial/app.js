@@ -109,11 +109,15 @@ const http = require("http");
 const fs = require("fs");
 
 const server = http.createServer((req, res) => {
-  res.writeHead(200, { "Content-Type": "text/html" });
+  res.writeHead(200, { "Content-Type": "application/json" });
 
-  const readStream = fs.createReadStream(__dirname + "/index.html", "utf-8");
+  const person = {
+    name: "alex",
+    email: "alex@email.co",
+    job: "designer",
+  };
 
-  readStream.pipe(res);
+  res.end(JSON.stringify(person));
 });
 
 server.listen(3000, "127.0.0.1");
