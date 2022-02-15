@@ -1,17 +1,17 @@
-const user = function (data) {
-  return `${data} is logged in`;
-};
+// const user = function (data) {
+//   return `${data} is logged in`;
+// };
 
-let id = function (id) {
-  return `${id}`;
-};
+// let id = function (id) {
+//   return `${id}`;
+// };
 
-let email = function (email) {
-  return email;
-};
+// let email = function (email) {
+//   return email;
+// };
 
-module.exports = {
-  user,
-  id,
-  email,
-};
+// module.exports = {
+//   user,
+//   id,
+//   email,
+// };
