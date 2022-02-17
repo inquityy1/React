@@ -9,3 +9,8 @@ mongoose.connection
   .on("error", (error) => {
     console.warn("An error accured", error);
   });
+
+beforeEach((done) => {
+  mongoose.connection.collections.students.drop();
+  done();
+});
