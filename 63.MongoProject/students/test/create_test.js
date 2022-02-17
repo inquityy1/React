@@ -4,6 +4,8 @@ const Student = require("../src/student");
 describe("Create the first data", () => {
   it("Save the student", () => {
     const jason = new Student({ name: "Jason" });
-    jason.save();
+    jason.save().then(() => {
+      assert(!jason.isNew).done();
+    });
   });
 });
