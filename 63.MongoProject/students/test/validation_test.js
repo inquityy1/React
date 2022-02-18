@@ -9,4 +9,11 @@ describe("validation", () => {
     const { message } = result.errors.name;
     assert(message === "Name is required");
   });
+
+  it("Name must be longer than 2 char", () => {
+    const newStudent = new Student({ name: "Em" });
+    const newResult = newStudent.validateSync();
+    const { message } = newResult.errors.name;
+    assert(message === "Name is too short");
+  });
 });

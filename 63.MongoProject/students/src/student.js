@@ -5,6 +5,10 @@ const StudentSchema = new Schema({
   name: {
     type: String,
     required: [true, "Name is required"],
+    validate: {
+      validator: (name) => name.length > 2,
+      message: "Name is too short",
+    },
   },
   studentNumber: Number,
   articleCount: Number,
