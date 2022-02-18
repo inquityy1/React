@@ -2,8 +2,8 @@ const assert = require("assert");
 const Student = require("../src/student");
 
 describe("Delete the records", () => {
-  let jason;
   let rosa;
+  let jason;
 
   beforeEach((done) => {
     jason = new Student({ name: "Jason" });
