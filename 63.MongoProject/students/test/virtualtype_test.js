@@ -1,5 +1,5 @@
 const assert = require("assert");
-const Student = request("../src/student");
+const Student = require("../src/student");
 
 describe("Virtual types", () => {
   it("article counts", (done) => {
