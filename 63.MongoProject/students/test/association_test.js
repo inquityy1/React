@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const assert = require("assert");
 const Student = require("../src/student");
 const Comment = require("../src/comment");
 const ArticleBlog = require("../src/articleBlog");
@@ -17,5 +18,40 @@ describe("Association Test", () => {
     jason.articleBlog.push(articleBlog);
     articleBlog.comments.push(comment);
     comment.students = jason;
+
+    Promise.all([jason.save(), articleBlog.save(), comment.save()]).then(() =>
+      done()
+    );
+  });
+
+  it("Associate student with articleBlog", (done) => {
+    Student.findOne({ name: "Jason" })
+      .populate("articleBlog")
+      .then((student) => {
+        assert(student.articleBlog[0].title === "MongoDb");
+      });
+    done();
+  });
+
+  it.only("Nestedpopulate", (done) => {
+    Student.findOne({ name: "Jason" })
+      .populate({
+        path: "articleBlog",
+        populate: {
+          path: "comments",
+          model: "comment",
+          populate: {
+            path: "students",
+            model: "student",
+          },
+        },
+      })
+      .then((student) => {
+        assert(student.name === "Jason");
+        assert(student.articleBlog[0].title === "MongoDb");
+        assert(student.articleBlog[0].comments[0].content === "Well done!");
+        assert(student.articleBlog[0].comments[0].students.name === "Jason");
+        done();
+      });
   });
 });
