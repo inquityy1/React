@@ -16,4 +16,13 @@ describe("validation", () => {
     const { message } = newResult.errors.name;
     assert(message === "Name is too short");
   });
+
+  it("prevent invalid records", (done) => {
+    const student = new Student({ name: "Em" });
+    student.save().catch((validationResult) => {
+      const { message } = validationResult.errors.name;
+      assert(message === "Name is too short");
+      done();
+    });
+  });
 });
