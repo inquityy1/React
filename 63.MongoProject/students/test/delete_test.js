@@ -7,7 +7,7 @@ describe("Delete the records", () => {
 
   beforeEach((done) => {
     jason = new Student({ name: "Jason" });
-    jason = new Student({ name: "Rosa" });
+    rosa = new Student({ name: "Rosa" });
     rosa.save();
     jason.save().then(() => done());
   });

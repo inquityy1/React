@@ -3,7 +3,7 @@ const Student = require("../src/student");
 
 describe("Updating records", () => {
   let jason;
-  let jason2;
+  // let jason2;
 
   beforeEach((done) => {
     jason = new Student({
