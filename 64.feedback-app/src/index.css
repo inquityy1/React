@@ -146,6 +146,9 @@ input:focus {
 }
 
 .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
   border: 0;
   border-radius: 8px;
