@@ -9,21 +9,29 @@ function App() {
     { id: 3, text: "Comment three" },
   ];
 
+  const loading = false;
+  const showComments = false;
+
+  if (loading) return <h1>Loading...</h1>;
+
+  const commentBlock = (
+    <div className="comments">
+      <h3>Comments ({comments.length})</h3>
+
+      <ul>
+        {comments.map((comment, index) => (
+          <li key={index}>{comment.text}</li>
+        ))}
+      </ul>
+    </div>
+  );
+
   return (
     <div className="container">
-      <h1>{title.toUpperCase}</h1>
+      <h1>{title.toUpperCase()}</h1>
       <p>{body}</p>
-      {Math.random() * (5 + 5)}
 
-      <div className="comments">
-        <h3>Comments ({comments.length})</h3>
-
-        <ul>
-          {comments.map((comment, index) => (
-            <li key={index}>{comment.text}</li>
-          ))}
-        </ul>
-      </div>
+      {showComments && commentBlock}
     </div>
   );
 }
