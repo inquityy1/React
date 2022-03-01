@@ -5,6 +5,7 @@ import {
   createUserWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
+import { toast } from "react-toastify";
 import { setDoc, doc, serverTimestamp } from "firebase/firestore";
 import { db } from "../firebase.config";
 import { ReactComponent as ArrowRightIcon } from "../assets/svg/keyboardArrowRightIcon.svg";
@@ -54,7 +55,7 @@ function SignUp() {
 
       navigate("/");
     } catch (error) {
-      console.log(error);
+      toast.error("Something went wrong with registration");
     }
   };
 
@@ -107,7 +108,7 @@ function SignUp() {
           </Link>
 
           <div className="signUpBar">
-            <p className="signUpText">Sign In</p>
+            <p className="signUpText">Sign Up</p>
             <button className="signUpButton">
               <ArrowRightIcon fill="#ffffff" width="34px" height="34px" />
             </button>
