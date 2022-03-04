@@ -54,7 +54,7 @@ function Contact() {
             </div>
 
             <a
-              href={`mailto:${landlord}?Subject=${searchParams.get(
+              href={`mailto:${landlord /*.email */}?Subject=${searchParams.get(
                 "listingName"
               )}$body=${message}`}
             >
