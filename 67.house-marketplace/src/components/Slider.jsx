@@ -9,7 +9,7 @@ import Spinner from "./Spinner";
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 function Slider() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [listings, setListings] = useState(null);
 
   const navigate = useNavigate();
