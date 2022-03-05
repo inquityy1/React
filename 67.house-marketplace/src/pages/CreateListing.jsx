@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Spinner from "../components/Spinner";
 
-function CreateLisiting() {
+function CreateListing() {
   const [geolocationEnabled, setGeolocationEnabled] = useState(true);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
@@ -447,4 +447,4 @@ function CreateLisiting() {
   );
 }
 
-export default CreateLisiting;
+export default CreateListing;
