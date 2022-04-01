@@ -1,7 +1,7 @@
 import Button from "../components/Button";
 
 export default {
-  title: "Button",
+  title: "Components/Button",
   component: Button,
   argTypes: { handleClick: { action: "handleClick" } },
 };
